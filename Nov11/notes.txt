@@ -1,0 +1,49 @@
+Vector [i] -> O(1)
+vector.append(i) -> O(1)*
+vector.prepend(1) -> O(n)
+vector.insert(1) -> O(n) copying
+
+list [i] -> O(n)
+list.append(1) -> O(1)
+list.prepend(i) -> O(1)
+list.insert(i) -> O(1) to find insertion pt.
+
+find a number from 1 to 100 (higher and lower clue)(choose 49)
+1,2,3,... 50 ... 98,99,100 	-> 100
+best guess is 50 (halving)
+1,2,3 ... 25... 49		-> 49
+26 ..38.. 49	 		-> 24
+39.. 44 .. 49			-> 11
+44 .. 47 .. 49			-> 5
+47 .. 48 .. 49 			-> 3
+48 or 49					-> 2
+49 						->1
+O(log2(n)) -> binary search strategy
+binsearch (1,100)
+bin search(1, 49) ...
+
+Bin search( lo, hi, search val)
+mid = (hi+lo)/2
+if struct[mid] == searchVal
+	done
+else if struct[mid] < searchVal
+	bin search(lo,mid-1);
+else
+	bin search (mid+1, hi)
+
+v.search -> O(n) random
+v.search -> O(log(n)) sorted
+ in list, the search must be able to change its pointer. eq 1 2 3 4 5 6 7
+ binary search tree.
+ search - > O(log(n))
+ 
+ bst.insert(4)
+ bst.insert(6)
+ bst.insert(5)
+ works like a tree
+ 
+ delete O(n)
+ traversal: 3 patterns for BST (all recursive)
+ preorder: top down, L-R pattern
+ inorder: 1 left 2. visit 3. right
+ postorder: 1. left. 2. right. 3. visit
